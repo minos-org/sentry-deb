@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+case "${1}" in
+    purge|remove)
+        if [ -f /etc/hosts.allow.backup ]; then
+            mv /etc/hosts.allow.backup /etc/hosts.allow
+        fi
+        rm -rf /var/db/sentry
+        rmdir  /var/db || true
+        ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear) ;;
+
+    *) printf "%s\\n" "${0} called with unknown argument \`${1}'" 1>&2
+       exit 1 ;;
+esac
+
+#DEBHELPER#
+
+exit 0

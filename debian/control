@@ -1,0 +1,22 @@
+Source: sentry
+Section: admin
+Priority: optional
+Maintainer: Javier P.L. <chilicuil@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.5)
+Standards-Version: 3.9.4
+Homepage: https://www.tnpi.net/wiki/Sentry
+Vcs-Git: git://github.com/minos-org/sentry-deb.git
+Vcs-Browser: https://github.com/minos-org/sentry-deb.git
+
+Package: sentry
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, perl, debconf
+Description: Safe and effective protection against bruteforce attacks
+ Sentry detects and prevents bruteforce attacks against sshd using minimal
+ system resources. Most bruteforce blocking apps (denyhosts, fail2ban,
+ sshdfilter) expect to run as a daemon, tailing a log file. That requires a
+ language interpreter to always be running, consuming at least 10MB of RAM.
+ .
+ Sentry uses resources only when connections are made. Once an IP is blacklisted
+ for abuse, whether by tcpd or a firewall, the resources it can consume are
+ practically zero. See more information at: https://www.tnpi.net/wiki/Sentry
