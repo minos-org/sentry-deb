@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/minos-org/sentry-deb.git
 
 Package: sentry
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, perl, debconf
+Depends: ${shlibs:Depends}, ${misc:Depends}, perl, debconf, libnet-ip-perl
 Description: Safe and effective protection against bruteforce attacks
  Sentry detects and prevents bruteforce attacks against sshd using minimal
  system resources. Most bruteforce blocking apps (denyhosts, fail2ban,
