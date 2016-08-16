@@ -1,3 +1,10 @@
+sentry (1:201608161118+gite4006ea-minos) precise; urgency=low
+
+  * add trusty/xenial packages into lp recipe:
+    https://code.launchpad.net/~minos-archive/+recipe/sentry
+
+ -- Javier P.L. <chilicuil@ubuntu.com>  Tue, 16 Aug 2016 11:18:50 -0500
+
 sentry (1:201406192125+gite4006ea-minos) precise; urgency=low
 
   * New version
